@@ -16,7 +16,7 @@ namespace PrimeNumber
 
             while (run)
             {
-                //PrintMenu();
+                PrintMenu();
 
                 string menuInput = Console.ReadLine();
 
@@ -33,7 +33,7 @@ namespace PrimeNumber
                         run = false;
                         break;
                     default:
-                        //MenuError();
+                        MenuError();
                         break;
                 }
 
@@ -44,7 +44,12 @@ namespace PrimeNumber
 
         static void PrintMenu()
         {
-
+            Console.WriteLine("" +
+                    "1. Search for prime\n" +
+                    "2. Show list of prime\n" +
+                    "3. Quit\n" +
+                    "----------");
+            Console.WriteLine("Enter your choice:");
         }
 
         static void SearchPrime()
@@ -55,6 +60,14 @@ namespace PrimeNumber
         static void ListPrime()
         {
 
+        }
+
+        //Error message if user enter wrong input in startmenu
+        static void MenuError()
+        {
+            Console.WriteLine("---------- \n" +
+                    "Wrong input, Enter a number between 1-3 \n" +
+                    "----------");
         }
 
     }
